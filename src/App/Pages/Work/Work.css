@@ -1,0 +1,115 @@
+.work-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 1000ms;
+  }
+  
+  .work-container .projet-content {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 20px;
+  }
+  
+  .work-container .projet-content p {
+    font-size: 50px;
+    font-weight: 900;
+  }
+  
+  .work-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    width: 100%;
+  }
+  
+  .our-works .container-ourworks {
+    margin-bottom: 40px;
+  }
+  
+  .our-works .container-ourworks + .container-ourworks .work-container figure {
+    height: 300px;
+  }
+  
+  .work-container figure {
+    margin: 0;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .work-container figure::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(2);
+    transition: opacity 300ms;
+  }
+  
+  .work-container figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 600ms, transform 600ms;
+  }
+  
+  .work-container a:is(:hover, :focus) figure::after {
+    opacity: 1;
+  }
+  
+  .work-container a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transition: opacity 600ms;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .work-container figcaption {
+      transform: translate3d(0, 2rem, 0);
+    }
+  
+    .work-container figure::after {
+      border-radius: 50%;
+      opacity: 1;
+      transform: scale(0);
+      transition: transform 900ms;
+    }
+  
+    .work-container a:is(:hover, :focus) figure::after {
+      transform: scale(2.5);
+    }
+  
+    .work-container a:is(:hover, :focus) figcaption {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 600ms 400ms, transform 600ms 400ms;
+    }
+  
+    .work-container a:is(:hover, :focus) img {
+      transform: scale(1.2);
+    }
+  }
+  

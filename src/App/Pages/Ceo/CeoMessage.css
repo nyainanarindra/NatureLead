@@ -1,0 +1,22 @@
+.ceo-photo {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+.ceo-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+.ceo-message {
+    background-color: #17738a;
+  }
+  
+.ceo-message *,
+.ceo-message .section-title p,
+.ceo-message .section-title h2 {
+    color: #ffffff;
+}

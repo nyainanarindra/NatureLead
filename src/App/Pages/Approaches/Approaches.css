@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# approuche Section
+--------------------------------------------------------------*/
+.approuche {
+    background-color: #98d957;
+  }
+  .approuche .section-title p {
+    color: #ffffff;
+  }
+  
+  .approuche-item figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .approuche-item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .approuche .approuche-item {
+    background-color: var(--surface-color);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: content-box;
+    padding: 15px;
+    margin: 0 15px;
+    position: relative;
+    height: 100%;
+  }
+  
+  .approuche .approuche-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+  }
+  
+  .approuche .approuche-item h4 {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin: 0;
+  }
+  
+  .approuche .approuche-item .stars {
+    margin: 10px 0;
+  }
+  
+  .approuche .approuche-item .stars i {
+    color: #421a42;
+    margin: 0 1px;
+  }
+  
+  .approuche .approuche-item .quote-icon-left,
+  .approuche .approuche-item .quote-icon-right {
+    color: color-mix(in srgb, #421a42, transparent 50%);
+    font-size: 26px;
+    line-height: 0;
+  }
+  
+  .approuche .approuche-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+  }
+  
+  .approuche .approuche-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+    transform: scale(-1, -1);
+  }
+  
+  .approuche .approuche-item p {
+    font-style: italic;
+    margin: 15px auto 15px auto;
+  }
+  
+  .approuche .swiper-wrapper {
+    height: auto;
+  }
+  
+  .approuche .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .approuche .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    opacity: 1;
+  }
+  
+  .approuche .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+  }
+  
+  @media (max-width: 767px) {
+    .approuche .approuche-wrap {
+      padding-left: 0;
+    }
+  
+    .approuche .approuche-item {
+      padding: 30px;
+      margin: 15px;
+    }
+  
+    .approuche .approuche-item .approuche-img {
+      position: static;
+      left: auto;
+    }
+  }
+  
